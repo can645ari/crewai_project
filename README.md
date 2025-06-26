@@ -1,5 +1,3 @@
-Elbette! İşte senin projen için sade ve açıklayıcı bir `README.md` içeriği:
-
 ````markdown
 # CREWAI Project
 
