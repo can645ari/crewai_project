@@ -1,27 +1,74 @@
 ````markdown
-# CREWAI Project
+# CREWAI: Otomatik Araştırma Yazısı Üretimi
 
-Bu proje, belirli bir konu hakkında Hugging Face modellerini kullanarak araştırma verisi toplar ve bu verilerle Markdown formatında otomatik olarak bir araştırma yazısı üretir.
+Bu proje, kullanıcıdan alınan bir konuya göre Hugging Face modellerini kullanarak araştırma verisi toplar ve bu verilerle Markdown formatında otomatik bir araştırma yazısı oluşturur.
 
-## 🔧 Kurulum
+---
 
-1. Sanal ortamı etkinleştir:
-   ```bash
-   .\venv\Scripts\activate
-   ```
+## 🛠️ Kurulum Adımları
+
+Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edin:
+
+### 1️⃣ Proje Dosyalarını Klonlayın (Eğer GitHub üzerinden alacaksanız)
+
+```bash
+git clone https://github.com/can645ari/crewai_project.git
+cd crewai_project
 ````
 
-2. Gerekli paketleri yükle:
+### 2️⃣ Sanal Ortam Oluşturun ve Aktifleştirin
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+#### Sanal ortam oluşturma:
 
-3. Ortam değişkenini tanımla (PowerShell için):
+```bash
+python -m venv venv
+```
 
-   ```bash
-   $env:HUGGINGFACE_API_KEY="hf_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-   ```
+#### Sanal ortamı aktifleştirme:
+
+**Windows:**
+
+```bash
+.\venv\Scripts\activate
+```
+
+**MacOS / Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+### 3️⃣ Gerekli Paketleri Yükleyin
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔐 Ortam Değişkeni Tanımlama
+
+Uygulamanın çalışabilmesi için Hugging Face API anahtarınızı ortam değişkeni olarak tanımlamanız gerekir.
+
+### PowerShell (Windows) için:
+
+```bash
+$env:HUGGINGFACE_API_KEY="hf_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
+
+### MacOS / Linux için:
+
+```bash
+export HUGGINGFACE_API_KEY="hf_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
+
+Projenizin ana dizininde `.env` dosyası oluşturup aşağıdaki şekilde API anahtarınızı tanımlayın:
+
+```
+HUGGINGFACE_API_KEY=hf_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+---
 
 ## 🚀 Kullanım
 
@@ -29,23 +76,31 @@ Bu proje, belirli bir konu hakkında Hugging Face modellerini kullanarak araşt�
 python main.py
 ```
 
-1. Sizden bir konu girmeniz istenecek.
-2. Hugging Face üzerinden araştırma verisi toplanacak.
-3. `output/` klasöründe Markdown formatında bir araştırma raporu oluşturulacak.
-
-## 📁 Çıktılar
-
-- Üretilen dosyalar `output/` klasörüne `.md` uzantılı olarak kaydedilir.
-- Dosya adı otomatik olarak konuyla eşleşecek şekilde oluşturulur.
-
-## 📦 Bağımlılıklar
-
-(Tüm bağımlılıklar `requirements.txt` içinde belirtilmiştir.)
-
-## 🛑 Notlar
-
-- Ana proje dizininde `.env` dosyası oluşturup içerisine kendi Hugging Face API anahtarınızı eklemeyi unutmayın.
+1. Sizden bir konu girmeniz istenir.
+2. Hugging Face API üzerinden araştırma verileri toplanır.
+3. `output/` klasöründe, girilen konuya göre adlandırılmış `.md` uzantılı bir araştırma raporu oluşturulur.
 
 ---
 
-Bu proje sadece eğitim ve araştırma amaçlıdır.
+## 📁 Çıktılar
+
+* Üretilen dosyalar `output/` klasöründe saklanır.
+* Dosya adları, girilen konu başlığına göre otomatik olarak belirlenir.
+
+---
+
+## 📦 Bağımlılıklar
+
+Projenin çalışması için gerekli tüm Python kütüphaneleri `requirements.txt` dosyasında tanımlanmıştır.
+
+Yüklemek için:
+
+```bash
+pip install -r requirements.txt
+```
+
+## 📄 Lisans
+
+Bu proje eğitim ve geliştirme amacıyla sunulmuştur.
+
+---
