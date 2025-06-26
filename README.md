@@ -104,3 +104,10 @@ pip install -r requirements.txt
 Bu proje eğitim ve geliştirme amacıyla sunulmuştur.
 
 ---
+
+## 📬 İletişim
+
+Geliştirici: **Can Arı**
+📧 E-posta: [caaan384@gmail.com](mailto:caaan384@gmail.com)
+
+---
