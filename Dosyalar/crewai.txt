@@ -1,0 +1,15 @@
+******
+TEST : digital marketing, artificial intelligence, mobile application, web application, blockchain technology
+*****
+
+KONTROL :
+
+Açarken
+1-) .\venv\Scripts\activate bu komutu çalıştır
+2-) $env:HUGGINGFACE_API_KEY="hf_..." komutunu çalıştır. (Noktalar yerine Huggingface'den aldığınız kendi api key'inizi yazın.)
+3-) python main.py komutunu çalıştır
+
+
+Kapatırken
+1-) deactivate komutunu çalıştır
+2-) her şeyi kaydet ve kapat
